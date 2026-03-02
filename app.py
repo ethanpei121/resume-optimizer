@@ -12,7 +12,7 @@ from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 from reportlab.pdfgen import canvas
 
 
-API_KEY = st.secrets["ALIYUN_API_KEY"]
+MY_API_KEY = st.secrets["ALIYUN_API_KEY"]
 BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 MODEL_NAME = "qwen-plus"
 
@@ -60,7 +60,7 @@ def extract_uploaded_jd(uploaded_file) -> str:
 
 
 def call_llm(jd_text: str, resume_text: str) -> str:
-    client = OpenAI(api_key=API_KEY, base_url=BASE_URL)
+    client = OpenAI(api_key=MY_API_KEY, base_url=BASE_URL)
     user_prompt = f"""
 【目标岗位的职位描述（JD）】
 {jd_text}
