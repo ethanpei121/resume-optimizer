@@ -12,7 +12,7 @@ from reportlab.pdfbase.cidfonts import UnicodeCIDFont
 from reportlab.pdfgen import canvas
 
 
-API_KEY = "sk-99a896646dc0498fa779c88df07530c0"
+API_KEY = st.secrets["ALIYUN_API_KEY"]
 BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
 MODEL_NAME = "qwen-plus"
 
